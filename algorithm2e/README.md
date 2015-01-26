@@ -3,6 +3,9 @@
 ###algorithm2e.styを入手
 algorithm2e.zipに使い方やサンプルも中に入ってる．  
 [http://www.ctan.org/tex-archive/macros/latex/contrib/algorithm2e](http://www.ctan.org/tex-archive/macros/latex/contrib/algorithm2e)  
+**注意**：TeXインストールの環境にもよるが，どうやらalgorithm2e.styは最初っから導入されていることが多い？  
+errorがでたら導入されてないから，algorithm2e.sty持ってきて．  
+
 ![Download](./img/Download.png)  
 
 ###jdummy.defを入手

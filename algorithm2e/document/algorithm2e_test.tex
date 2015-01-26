@@ -1,0 +1,51 @@
+\documentclass[a4paper,12pt]{ujarticle}
+% Sublime Text 2におけるLatexToolsフォントに関するエラーメッセージ対策
+% http://oku.edu.mie-u.ac.jp/~okumura/texwiki/?LaTeX%20%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8#p4b7362a
+
+\usepackage{bm} % 数式上の$\bm{}$を使うためのやつ
+% 下の3つが最小構成
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{setspace}
+\input{jdummy.def}
+
+% ドキュメントの開始
+\begin{document}
+
+% algorithm2e.styのDocumentから
+\begin{algorithm}
+\setstretch{1.2}
+\DontPrintSemicolon
+\nl\KwData{$G=(X,U)$ such that $G^{tc}$ is an order.}
+\nl\KwResult{$G’=(X,V)$ with $V\subseteq U$ such that $G’^{tc}$ is aninterval order.}
+\nl\Begin{
+  \nl$V \longleftarrow U$\;
+  \nl$S \longleftarrow \emptyset$\;
+  \nl\For{$x\in X$}{
+  \nl$NbSuccInS(x) \longleftarrow 0$\;
+  \nl$NbPredInMin(x) \longleftarrow 0$\;
+  \nl$NbPredNotInMin(x) \longleftarrow |ImPred(x)|$\;
+  }
+  \nl\For{$x \in X$}{
+    \nl\If{$NbPredInMin(x) = 0$ {\bf and} $NbPredNotInMin(x) = 0$}{
+      \nl$AppendToMin(x)$
+    }
+  }
+  \nl\While{$S \neq \emptyset$}{
+    \nl\While{$|S \cap ImSucc(x)| \neq |S|$}{
+      \nl\For{$ y \in S-ImSucc(x)$}{
+        \nl\For{$z \in ImPred(y) \cap Min$}{
+          \nl remove the arc $zy$ from $V$\;
+          \nl$NbSuccInS(z) \longleftarrow NbSuccInS(z) - 1$\;
+          \nl move $z$ in $T$ to the list preceding its present list\;
+        }
+      }
+    }
+    \nl$RemoveFromMin(x)$\;
+  }
+  \nl\Return $0$\;
+}
+\caption{Sample Algorithm}
+\label{Sample}
+\end{algorithm}
+
+\end{document}

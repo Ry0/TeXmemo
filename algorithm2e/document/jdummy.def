@@ -1,0 +1,58 @@
+\DeclareRelationFont{JY2}{mc}{it}{}{OT1}{cmr}{it}{}
+\DeclareRelationFont{JT2}{mc}{it}{}{OT1}{cmr}{it}{}
+\DeclareFontShape{JY2}{mc}{m}{it}{<5> <6> <7> <8> <9> <10> sgen*min
+    <10.95><12><14.4><17.28><20.74><24.88> min10
+    <-> min10}{}
+\DeclareFontShape{JT2}{mc}{m}{it}{<5> <6> <7> <8> <9> <10> sgen*tmin
+    <10.95><12><14.4><17.28><20.74><24.88> tmin10
+    <-> tmin10}{}
+\DeclareRelationFont{JY2}{mc}{sl}{}{OT1}{cmr}{sl}{}
+\DeclareRelationFont{JT2}{mc}{sl}{}{OT1}{cmr}{sl}{}
+\DeclareFontShape{JY2}{mc}{m}{sl}{<5> <6> <7> <8> <9> <10> sgen*min
+    <10.95><12><14.4><17.28><20.74><24.88> min10
+    <-> min10}{}
+\DeclareFontShape{JT2}{mc}{m}{sl}{<5> <6> <7> <8> <9> <10> sgen*tmin
+    <10.95><12><14.4><17.28><20.74><24.88> tmin10
+    <-> tmin10}{}
+\DeclareRelationFont{JY2}{mc}{sc}{}{OT1}{cmr}{sc}{}
+\DeclareRelationFont{JT2}{mc}{sc}{}{OT1}{cmr}{sc}{}
+\DeclareFontShape{JY2}{mc}{m}{sc}{<5> <6> <7> <8> <9> <10> sgen*min
+    <10.95><12><14.4><17.28><20.74><24.88> min10
+    <-> min10}{}
+\DeclareFontShape{JT2}{mc}{m}{sc}{<5> <6> <7> <8> <9> <10> sgen*tmin
+    <10.95><12><14.4><17.28><20.74><24.88> tmin10
+    <-> tmin10}{}
+\DeclareRelationFont{JY2}{gt}{it}{}{OT1}{cmbx}{it}{}
+\DeclareRelationFont{JT2}{gt}{it}{}{OT1}{cmbx}{it}{}
+\DeclareFontShape{JY2}{mc}{bx}{it}{<5> <6> <7> <8> <9> <10> sgen*goth
+    <10.95><12><14.4><17.28><20.74><24.88> goth10
+    <-> goth10}{}
+\DeclareFontShape{JT2}{mc}{bx}{it}{<5> <6> <7> <8> <9> <10> sgen*tgoth
+    <10.95><12><14.4><17.28><20.74><24.88> tgoth10
+    <-> tgoth10}{}
+\DeclareRelationFont{JY2}{gt}{sl}{}{OT1}{cmbx}{sl}{}
+\DeclareRelationFont{JT2}{gt}{sl}{}{OT1}{cmbx}{sl}{}
+\DeclareFontShape{JY2}{mc}{bx}{sl}{<5> <6> <7> <8> <9> <10> sgen*goth
+    <10.95><12><14.4><17.28><20.74><24.88> goth10
+    <-> goth10}{}
+\DeclareFontShape{JT2}{mc}{bx}{sl}{<5> <6> <7> <8> <9> <10> sgen*tgoth
+    <10.95><12><14.4><17.28><20.74><24.88> tgoth10
+    <-> tgoth10}{}
+\DeclareRelationFont{JY2}{gt}{sc}{}{OT1}{cmbx}{sc}{}
+\DeclareRelationFont{JT2}{gt}{sc}{}{OT1}{cmbx}{sc}{}
+\DeclareFontShape{JY2}{mc}{bx}{sc}{<5> <6> <7> <8> <9> <10> sgen*goth
+    <10.95><12><14.4><17.28><20.74><24.88> goth10
+    <-> goth10}{}
+\DeclareFontShape{JT2}{mc}{bx}{sc}{<5> <6> <7> <8> <9> <10> sgen*tgoth
+    <10.95><12><14.4><17.28><20.74><24.88> tgoth10
+    <-> tgoth10}{}
+\DeclareRelationFont{JY2}{gt}{it}{}{OT1}{cmr}{it}{}
+\DeclareRelationFont{JT2}{gt}{it}{}{OT1}{cmr}{it}{}
+\DeclareFontShape{JY2}{gt}{m}{it}{<5> <6> <7> <8> <9> <10> sgen*goth
+    <10.95><12><14.4><17.28><20.74><24.88> goth10
+    <-> goth10}{}
+\DeclareFontShape{JT2}{gt}{m}{it}{<5> <6> <7> <8> <9> <10> sgen*tgoth
+    <10.95><12><14.4><17.28><20.74><24.88> tgoth10
+    <-> tgoth10}{}
+\endinput
+%%%% end of jdummy.def

@@ -166,7 +166,7 @@ tabular環境の中で行を縦に結合
 次の図の番号より1少ない値をカウンタにセット  
 
 |項目|コマンド|
-|:-|:-|
+|:--|:--|
 |図|\setcounter{figure}{4}|
 |表|\setcounter{table}{12}|
 |章|\setcounter{section}{6}|

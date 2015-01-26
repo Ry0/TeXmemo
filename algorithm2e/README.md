@@ -24,6 +24,6 @@
 \input{jdummy.def}
 ```
 
-これらを記述しておく．`\usepackage[ここはレイアウトのオプション]{algorithm2e}`の`[]`はオプションを書くところ．`algorithm2e.sty`が入っていたzipのドキュメントを見る．
+これらを記述しておく．`\usepackage[ここにレイアウトのオプション]{algorithm2e}`の`[]`はオプションを書くところ．`algorithm2e.sty`が入っていたzipのドキュメントを見る．
 
 ![成功](./img/Sample.png)  

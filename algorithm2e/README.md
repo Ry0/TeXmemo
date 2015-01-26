@@ -24,6 +24,47 @@
 \input{jdummy.def}
 ```
 
-これらを記述しておく．`\usepackage[ここにレイアウトのオプション]{algorithm2e}`の`[]`はオプションを書くところ．`algorithm2e.sty`が入っていたzipのドキュメントを見る．
+* これらを記述しておく．`\usepackage[ここにレイアウトのオプション]{algorithm2e}`の`[]`はオプションを書くところ．`algorithm2e.sty`が入っていたzipのドキュメントを見る．  
+* `\usepackage{setspace}`は擬似コードの行間を調整するためのやつ．  
+* `\input{jdummy.def}`はフォントが見つからない対策用．  
+
+```tex
+\begin{algorithm}
+\setstretch{1.2} %ここの数値で行間を調整
+\DontPrintSemicolon
+\nl\KwData{$G=(X,U)$ such that $G^{tc}$ is an order.} %頭に\lnをつけるとその行に番号がつく
+\nl\KwResult{$G’=(X,V)$ with $V\subseteq U$ such that $G’^{tc}$ is aninterval order.}
+\nl\Begin{
+  \nl$V \longleftarrow U$\;
+  \nl$S \longleftarrow \emptyset$\;
+  \nl\For{$x\in X$}{
+  \nl$NbSuccInS(x) \longleftarrow 0$\;
+  \nl$NbPredInMin(x) \longleftarrow 0$\;
+  \nl$NbPredNotInMin(x) \longleftarrow |ImPred(x)|$\;
+  }
+  \nl\For{$x \in X$}{
+    \nl\If{$NbPredInMin(x) = 0$ {\bf and} $NbPredNotInMin(x) = 0$}{
+      \nl$AppendToMin(x)$
+    }
+  }
+  \nl\While{$S \neq \emptyset$}{
+    \nl\While{$|S \cap ImSucc(x)| \neq |S|$}{
+      \nl\For{$ y \in S-ImSucc(x)$}{
+        \nl\For{$z \in ImPred(y) \cap Min$}{
+          \nl remove the arc $zy$ from $V$\;
+          \nl$NbSuccInS(z) \longleftarrow NbSuccInS(z) - 1$\;
+          \nl move $z$ in $T$ to the list preceding its present list\;
+        }
+      }
+    }
+    \nl$RemoveFromMin(x)$\;
+  }
+}
+\caption{Sample Algorithm}
+\label{Sample}
+\end{algorithm}
+```
+
+コンパイルに成功すると以下の写真みたいになる．  
 
 ![成功](./img/Sample.png)  

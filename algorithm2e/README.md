@@ -35,6 +35,8 @@ errorがでたら導入されてないから，algorithm2e.sty持ってきて．
 
 ```tex
 \begin{algorithm}
+\caption{Sample Algorithm}
+\label{Sample}
 \setstretch{1.2} %ここの数値で行間を調整
 \DontPrintSemicolon %この行を消すと文末にセミコロンがつくよ．
 \nl\KwData{$G=(X,U)$ such that $G^{tc}$ is an order.} %頭に\lnをつけるとその行に番号がつく
@@ -65,8 +67,6 @@ errorがでたら導入されてないから，algorithm2e.sty持ってきて．
     \nl$RemoveFromMin(x)$\;
   }
 }
-\caption{Sample Algorithm}
-\label{Sample}
 \end{algorithm}
 ```
 

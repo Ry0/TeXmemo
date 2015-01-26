@@ -1,6 +1,7 @@
 #algorithm2eを使った擬似コードの作成
 ##サイトから必要なファイルを取ってくる
-###algorithm2e.styを入手．また使い方やサンプルも中に入ってる．
+###algorithm2e.styを入手
+algorithm2e.zipに使い方やサンプルも中に入ってる．  
 [http://www.ctan.org/tex-archive/macros/latex/contrib/algorithm2e](http://www.ctan.org/tex-archive/macros/latex/contrib/algorithm2e)  
 ![Download](./img/Download.png)  
 

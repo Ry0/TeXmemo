@@ -14,7 +14,8 @@
 ./algorithm2e_test.tex: LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 ```
 
-このサイトのエラーでは`JY1/gt/m/i`が〜って言っているが，こちらでは`JY2`と`JT2`なのでダウンロードしてきた`jdummy.def`の中の，`JY1`と`JT1`の記述をそれぞれ`JY2`と`JT2`に全部置換．これでうまくいった．
+このサイトのエラーでは`JY1/gt/m/i`が〜って言っているが，こちらでは`JY2`と`JT2`なのでダウンロードしてきた`jdummy.def`の中の，`JY1`と`JT1`の記述をそれぞれ`JY2`と`JT2`に全部置換．これでうまくいった．  
+どうやらコンパイル環境によって、紹介したブログのように`JY1`，`JT1`についてWarningが出てるらしい，この場合は置換する必要なし．  
 
 ##実際にコンパイルしてみる
 

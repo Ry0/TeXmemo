@@ -19,6 +19,13 @@
 数式中の特殊記号  
 [http://www002.upp.so-net.ne.jp/latex/kigou_all.html](http://www002.upp.so-net.ne.jp/latex/kigou_all.html)  
 
+以上，以下  
+
+|意味|コマンド|
+|:--|:--|
+|以上|\leqq|
+|以下|\geqq|
+
 ニアイコール≒  
 ```tex
 \fallingdotseq

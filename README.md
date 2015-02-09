@@ -97,6 +97,7 @@
 
 [http://www.latex-cmd.com/fig_tab/figure01.html](http://www.latex-cmd.com/fig_tab/figure01.html)  
 [http://hooktail.org/computer/index.php?%BF%DE%A4%CE%C1%DE%C6%FE#content_1_1](http://www.latex-cmd.com/fig_tab/figure01.html)  
+[http://oku.edu.mie-u.ac.jp/~okumura/texwiki/?TeX%E5%85%A5%E9%96%80%2F%E5%9B%B3%E8%A1%A8](http://oku.edu.mie-u.ac.jp/~okumura/texwiki/?TeX%E5%85%A5%E9%96%80%2F%E5%9B%B3%E8%A1%A8)
 
 ###表組み
 ラウス表  
@@ -210,3 +211,21 @@ EPSファイルを適当なテキストエディタで開いて
 みたく設定する．  
 45 535が左下の座標  
 289 793が右上の座標  
+
+###付録をつける
+```tex
+\appendix
+\def\thesection{付録\Alph{section}}
+\def\thesubsection{\Alph{section}\arabic{subsection}}
+
+\makeatletter
+\renewcommand{\theequation}{\Alph{section}.\arabic{equation}}
+\@addtoreset{equation}{section}
+\makeatother
+% \setcounter{page}{1}
+
+\section{ }
+```
+
+###外国の著者の特別なアクセント記号対策
+[http://www.biwako.shiga-u.ac.jp/sensei/kumazawa/tex/accent.html](http://www.biwako.shiga-u.ac.jp/sensei/kumazawa/tex/accent.html)  

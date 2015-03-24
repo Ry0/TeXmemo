@@ -27,11 +27,13 @@
 |≧|\geqq|
 
 ニアイコール≒  
+
 ```tex
 \fallingdotseq
 ```
 
 ①，②...  
+
 ```tex
 \usepackage{pifont}
 \ding{192}
@@ -41,6 +43,7 @@
 
 ###数式中で文字を斜体にしない
 数式のおいて，単位を書く場合は，そのまま文字を書くのではなく，
+
 ```tex
 \mathrm{ }
 ```
@@ -48,6 +51,7 @@
 [http://tex.pc-physics.com/unit.html](http://tex.pc-physics.com/unit.html)  
 
 または数式を斜体にしないコマンド  
+
 ```tex
 \rm{}
 ```
@@ -76,6 +80,7 @@
 
 ##図，表関連
 ###図の基本
+
 ```tex
 \usepackage [dvipdfm]{graphicx}
 
@@ -101,6 +106,7 @@
 
 ###表組み
 ラウス表  
+
 ```tex
 \begin{table}[h]
   \begin{center}
@@ -115,12 +121,14 @@
 [http://www.latex-cmd.com/fig_tab/table01.html](http://www.latex-cmd.com/fig_tab/table01.html)  
 
 tabular環境の中で行を縦に結合  
+
 ```tex
 \usepackage{multirow}
 ```
 [http://anchoret.seesaa.net/article/79518144.html](http://anchoret.seesaa.net/article/79518144.html)  
 
 リスト表示  
+
 ```tex
 \begin {description}
   \item[$r(k)$] : 目標値 ( 離散時間信号 )
@@ -146,11 +154,13 @@ tabular環境の中で行を縦に結合
 
 ##その他，小ネタ
 ###図のタイトル「Figure～」を「図」に変更する
+
 ```tex
 \renewcommand{\figurename}{図}
 ```
 
 ###図のタイトルを図{章番号}.{図番号}～にする
+
 ```tex
 \renewcommand{\thefigure}{\thesection.\arabic{figure}}
 ```
@@ -159,12 +169,14 @@ tabular環境の中で行を縦に結合
 [http://tjun.org/blog/2008/06/latex-code/](http://tjun.org/blog/2008/06/latex-code/)  
 
 ###再レポート用のページ番号
+
 ```tex
 \renewcommand{\thepage}{再\arabic{page}}
 ```
 
 ###空白等
-指定した図を全部置いたあとリセットして文章書き始める  
+指定した図を全部置いたあとリセットして文章書き始める 
+
 ```tex
 \clearpage
 ```
@@ -200,11 +212,13 @@ tabular環境の中で行を縦に結合
 ###EPSのBoundingBox調整
 EPSファイルを適当なテキストエディタで開いて  
 上から数行目あたりの  
+
 ```bash
 %%BoundingBox: (atend)
 ```
 の記述探す．  
 これを  
+
 ```bash
 %%BoundingBox: 45 535 289 793
 ```
@@ -213,6 +227,7 @@ EPSファイルを適当なテキストエディタで開いて
 289 793が右上の座標  
 
 ###付録をつける
+
 ```tex
 \appendix
 \def\thesection{付録\Alph{section}}

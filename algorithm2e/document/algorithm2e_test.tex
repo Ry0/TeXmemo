@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{ujarticle}
+\documentclass[a4paper,12pt]{jsarticle}
 % Sublime Text 2におけるLatexToolsフォントに関するエラーメッセージ対策
 % http://oku.edu.mie-u.ac.jp/~okumura/texwiki/?LaTeX%20%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8#p4b7362a
 
@@ -6,13 +6,13 @@
 % 下の3つが最小構成
 \usepackage[ruled,vlined]{algorithm2e}
 \usepackage{setspace}
-\input{jdummy.def}
+% \input{jdummy.def}
 
 % ドキュメントの開始
 \begin{document}
 
 % algorithm2e.styのDocumentから
-\begin{algorithm}
+\begin{algorithm}[t]
 \caption{Sample Algorithm}
 \label{Sample}
 \setstretch{1.2}

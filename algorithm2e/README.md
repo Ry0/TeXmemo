@@ -10,7 +10,7 @@ errorがでたら導入されてないから，algorithm2e.sty持ってきて．
 
 ###jdummy.defを入手
 [http://shimizus.hustle.ne.jp/wiki/wiki.cgi?page=Font+shape+undefined%A5%A8%A5%E9%A1%BC%C2%D0%BD%E8](http://shimizus.hustle.ne.jp/wiki/wiki.cgi?page=Font+shape+undefined%A5%A8%A5%E9%A1%BC%C2%D0%BD%E8)  
-これがないと，Sublime TextのLaTeXToolsを使った環境では，以下のWarningが  
+~~これがないと，Sublime TextのLaTeXToolsを使った環境では，以下のWarningが~~  
 
 ```bash
 ./algorithm2e_test.tex:30: LaTeX Font Warning: Font shape `JT2/gt/m/it'    undefined(Font) using `JT2/gt/m/n' instead on input line 30.
@@ -20,6 +20,18 @@ errorがでたら導入されてないから，algorithm2e.sty持ってきて．
 
 このサイトのエラーでは`JY1/gt/m/i`が〜って言っているが，こちらでは`JY2`と`JT2`なのでダウンロードしてきた`jdummy.def`の中の，`JY1`と`JT1`の記述をそれぞれ`JY2`と`JT2`に全部置換．これでうまくいった．  
 どうやらコンパイル環境によって、紹介したブログのように`JY1`，`JT1`についてWarningが出てるらしい，この場合は置換する必要なし．  
+
+`traditionalBuilder.py`で`DEFAULT_COMMAND_LATEXMK`を変更するとエラー消えた．  
+```python
+DEFAULT_COMMAND_LATEXMK = ["latexmk", "-cd",
+                "-e", "$latex='platex -kanji=utf8 -guess-input-utf8 -synctex=1 -interaction=nonstopmode %S'",
+                "-e", "$bibtex = 'jbibtex'",
+                "-e", "$dvipdf = $dvipdf='dvipdfmx -f ptex-ipaex.map %S'",
+                "-e", "$dvips = 'pdvips'",
+                "-e", "$pdf_mode = 3"]
+```
+
+
 
 ##実際にコンパイルしてみる
 
@@ -32,9 +44,10 @@ errorがでたら導入されてないから，algorithm2e.sty持ってきて．
 * これらを記述しておく．`\usepackage[ここにレイアウトのオプション]{algorithm2e}`の`[]`はオプションを書くところ．`algorithm2e.sty`が入っていたzipのドキュメントを見る．  
 * `\usepackage{setspace}`は擬似コードの行間を調整するためのやつ．  
 * `\input{jdummy.def}`はフォントが見つからない対策用．  
+* `\begin{algorithm}[htbp]`で擬似コードの配置をコントロール
 
 ```tex
-\begin{algorithm}
+\begin{algorithm}[htbp]
 \caption{Sample Algorithm}
 \label{Sample}
 \setstretch{1.2} %ここの数値で行間を調整

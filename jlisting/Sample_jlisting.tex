@@ -1,0 +1,51 @@
+\documentclass[10pt,a4paper]{jsarticle}
+\usepackage{listings,jlisting}
+\begin{document}
+\section{ソースコードの埋め込み}
+
+\begin{lstlisting}[basicstyle=\ttfamily\footnotesize, frame=single, numbers=left]
+#include "main.h"
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <cstdlib>
+
+using namespace std;
+
+int main()
+{
+
+  size = initFromFile("../data/testcase1.dat");
+  cout << size.tate_size << "," << size.yoko_size << endl;
+
+  std::ofstream pathData("../data/path.dat");
+
+  // printTable();
+
+  sl = new SortedList();
+
+  sl->Insert(new Node(startI, startJ, 0, abs(startI - endI) + abs(startJ - endJ),
+                      abs(startI - endI) + abs(startJ - endJ), NULL));
+
+  Node *testNode = NULL;
+  Node *nodeTmp = NULL;
+
+  while (testNode == NULL) {
+    printf("\n\n");
+
+    testNode = astarStep();
+  }
+
+  sl->Clear();
+
+  table[startI][startJ] = 'S';
+  table[endI][endJ] = 'A';
+
+  // printTable();
+
+  return 0;
+}
+\end{lstlisting}
+
+% section section_name (end)
+\end{document}

@@ -19,7 +19,7 @@
 数式中の特殊記号  
 [http://www002.upp.so-net.ne.jp/latex/kigou_all.html](http://www002.upp.so-net.ne.jp/latex/kigou_all.html)  
 
-以上，以下  
+以上，以下は  
 
 |意味|コマンド|
 |:--|:--|
